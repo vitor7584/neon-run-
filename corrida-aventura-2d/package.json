@@ -1,0 +1,8 @@
+{
+  "name": "corrida-aventura-2d",
+  "version": "1.0.0",
+  "description": "Jogo de aventura e corrida 2D em Canvas para estudo",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "private": true
+}
