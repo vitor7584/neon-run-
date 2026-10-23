@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101426">
+  <title>Neon Run — Corrida Aventura 2D</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Neon Run início"><span class="brand-mark">N</span> NEON<span>RUN</span></a>
+      <div class="top-meta"><span class="live-dot"></span> ARCADE / 2D <span class="divider">|</span> PROJETO WEB</div>
+    </header>
+
+    <section class="game-card">
+      <div class="game-heading">
+        <div><p class="eyebrow">CORRA. EVOLUA. SUPERE.</p><h1>NEON <span>RUN</span></h1></div>
+        <div class="badge">● SISTEMA ONLINE</div>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="gameCanvas" width="960" height="540" aria-label="Área do jogo Neon Run"></canvas>
+        <div id="overlay" class="overlay">
+          <div class="overlay-content">
+            <p id="overlayKicker" class="eyebrow">SUA PRÓXIMA AVENTURA COMEÇA AQUI</p>
+            <h2 id="overlayTitle">A cidade<br><span>nunca dorme.</span></h2>
+            <p id="overlayText">Atravesse três mundos, desvie dos perigos e conquiste o topo.</p>
+            <div class="menu-buttons">
+              <button id="playBtn" class="btn btn-primary">▶ JOGAR</button>
+              <button id="instructionsBtn" class="btn btn-ghost">COMO JOGAR</button>
+              <button id="creditsBtn" class="btn btn-ghost">CRÉDITOS</button>
+            </div>
+          </div>
+        </div>
+        <div class="hud" id="hud" hidden>
+          <div class="hud-chip"><small>FASE</small><strong id="hudLevel">01 / 03</strong></div>
+          <div class="hud-chip"><small>PONTOS</small><strong id="hudScore">00000</strong></div>
+          <div class="hud-chip"><small>DISTÂNCIA</small><strong id="hudDistance">0 m</strong></div>
+          <div class="hud-chip health-chip"><small>ENERGIA</small><div class="health-track"><div id="healthBar"></div></div></div>
+        </div>
+        <div id="toast" class="toast" hidden></div>
+      </div>
+
+      <div class="below-canvas">
+        <div class="control-hint"><span class="key">←</span><span class="key">→</span> MOVER <span class="key">SPACE</span> PULAR</div>
+        <div class="record">SEU RECORDE <strong id="bestScore">00000</strong></div>
+        <button id="soundBtn" class="sound-btn" aria-label="Ativar ou desativar som">♫ SOM: OFF</button>
+      </div>
+    </section>
+
+    <footer><span>NEON RUN <span class="footer-dash">/</span> BUILD 1.0</span><span>FEITO PARA EXPLORADORES DIGITAIS <span class="footer-star">✦</span></span></footer>
+  </main>
+  <script src="/js/player.js"></script>
+  <script src="/js/level.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="/js/game.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
